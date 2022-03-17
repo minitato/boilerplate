@@ -1,0 +1,17 @@
+default:
+  type: postgres
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+  database: postgres
+  entities:
+    - 'dist/adapter/out/persistence/database/mapper/*.ts'
+  synchronize: false
+  logging: true
+  logger: 'file'
+  migrationsTableName: 'migrations'
+  migrations:
+    - 'dist/adapter/out/persistence/database/migrations/*.ts'
+  cli:
+    migrationsDir: 'src/adapter/out/persistence/database/migrations'
